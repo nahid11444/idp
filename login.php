@@ -34,7 +34,7 @@
       $servername = "localhost";
       $username = "root";
       $password = "";
-      $database = "vkhs_ver3";
+      $database = "idp";
 
       // create a connection
       $conn = mysqli_connect($servername, $username, $password, $database);
@@ -58,16 +58,16 @@
           $uname = validate($uname);
           $psw = validate($psw);
           if($uname <> NULL && $psw <> NULL) {
-            $sql =  "SELECT * FROM `users` WHERE `username` = '$uname'";
+            $sql =  "SELECT * FROM `login` WHERE `username` = '$uname'";
             $result = mysqli_query($conn, $sql);
             if(mysqli_num_rows($result)) {
               $row = mysqli_fetch_assoc($result);
               if($row["password"] == $psw) {
-                if($row["designation"] == "adm") {
-                  header("Location: admin_db.html");
+                if($row["type"] == "admin") {
+                  header("Location: admin_firer_reg.php");
                 }
                 else {
-                  header("Location: user_db.html");
+                  header("Location: user_view.php");
                 }
               }
               else {

@@ -1,3 +1,7 @@
+<?php
+ session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,24 +73,16 @@
 </div>
 <div class="container">
   <a href="user_view.php"> <button style="border: 2px solid red;" type="submit">Publish</button></a>
-  <?php
-    // $Date= $_POST['Date'];
-    // $No= $_POST['No'];
-    // $Rank= $_POST['Rank'];
-    // $Name= $_POST['Name'];
-    // $Unit= $_POST['Name'];
-    // $Total_fired= $_POST['Total_fired'];
-    // $Total_hit= $_POST['Total_hit'];
-
-    $Date = copy('admin_result_reg.php', 'user_view.php');
-    $No = copy('admin_result_reg.php', 'user_view.php');
-    $Rank = copy('admin_result_reg.php', 'user_view.php');
-    $Name = copy('admin_result_reg.php', 'user_view.php');
-    $Unit= copy('admin_result_reg.php', 'user_view.php');
-    $Total_fired = copy('admin_result_reg.php', 'user_view.php');
-    $Total_hit= copy('admin_result_reg.php', 'user_view.php');
-  ?>
 </div>
 </form>
+  <?php  
+    $SESSION["Date"]='Date';
+    $SESSION["No"]= 'No';
+    $SESSION["Rank"]='Rank';
+    $SESSION["Name"]='Name';
+    $SESSION["Unit"]='Name';
+    $SESSION["Total_fired"]='Total_fired';
+    $SESSION["Total_hit"]='Total_hit';
+  ?>  
 </body>
 </html>

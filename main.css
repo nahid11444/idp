@@ -189,11 +189,11 @@
      #SPACING
      ========================================================================== */
   .p-t-100 {
-    padding-top: 100px;
+    padding-top: 20px;
   }
   
   .p-t-130 {
-    padding-top: 130px;
+    padding-top: 40px;
   }
   
   .p-t-180 {
@@ -229,6 +229,7 @@
      ========================================================================== */
   .wrapper {
     margin: 0 auto;
+    background-color: #555;
   }
   
   .wrapper--w960 {
@@ -256,7 +257,7 @@
     transition: all 0.4s ease;
     cursor: pointer;
     font-size: 18px;
-    color: #fff;
+    color: rgb(75, 33, 226);
     font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
   }
   
@@ -304,6 +305,7 @@
   input[type="date" i] {
     padding: 14px;
   }
+
   
   .table-condensed td, .table-condensed th {
     font-size: 14px;
@@ -322,7 +324,7 @@
     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     display: none;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #686363;
     margin-top: 5px;
   }
   
@@ -335,7 +337,7 @@
   }
   
   .daterangepicker .table-condensed th select {
-    border: 1px solid #ccc;
+    border: 1px solid rgb(44, 44, 44);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -361,7 +363,7 @@
   
   .input--style-4 {
     line-height: 50px;
-    background: #fafafa;
+    background: #402980;
     -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
     -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
     box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
@@ -432,7 +434,7 @@
   }
   
   .radio-container input:checked ~ .checkmark {
-    background-color: #e5e5e5;
+    background-color: #302e2e;
   }
   
   .radio-container input:checked ~ .checkmark:after {
@@ -466,7 +468,7 @@
     left: 0;
     height: 20px;
     width: 20px;
-    background-color: #e5e5e5;
+    background-color: #494949;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -514,7 +516,7 @@
   .rs-select2 .select2-container {
     width: 100% !important;
     outline: none;
-    background: #fafafa;
+    background: #494949;
     -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
     -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
     box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
@@ -591,7 +593,7 @@
     -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-    border: 1px solid #e0e0e0;
+    border: 1px solid #504e4e;
     margin-top: 5px;
     overflow: hidden;
   }
@@ -617,11 +619,11 @@
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    background: #fff;
+    background: rgb(14, 102, 153);
   }
   
   .card-4 {
-    background: #fff;
+    background: rgb(135, 129, 155);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -635,7 +637,7 @@
     padding-bottom: 65px;
   }
   
-  @media (max-width: 767px) {
+  @media (max-width: 500px) {
     .card-4 .card-body {
       padding: 50px 40px;
     }

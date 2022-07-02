@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>VKHS - Virtual Kill house System</title>
+    <title>VKHS</title>
 </head>
 
 <body>
@@ -27,52 +27,24 @@
         <!-- navbar -->
         <!-- ============================================================== -->
         <div class="dashboard-header">
-            <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">VKHS</a>
+            <nav class="navbar navbar-expand-lg bg-light fixed-top">
+                <img style="height:60px ; width:60px;" src="./images/download.png">
+                <a class="navbar-brand">VIRTUAL KILL HOUSE SYSTEM</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                        <li class="nav-item">
-                            <div id="custom-search" class="top-search-bar">
-                                <input class="form-control" type="text" placeholder="Search..">
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown notification">
-                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
-                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
-                                <li>
-                                    <div class="notification-title"> Notification</div>
-                                    <div class="notification-list">
-                                        <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">9 Sig Bn </span>has sheduled Kill House Fire
-                                                        <div class="notification-date">4 days ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
-                                </li>
-                            </ul>
-                        </li>
-                        
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./images/arrow.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
+                                    <!-- here i need to add user's  name -->
                                     <h5 class="mb-0 text-white nav-user-name">Unit Authority </h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
-                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="login.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>User Information</a>
+                                <a class="dropdown-item" href="logout.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -97,40 +69,17 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
                             <li class="nav-divider">
-                                Menu
+                                <!-- Add Role of user here by php -->
+                                admin
                             </li>
-                            
-                            <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
-                                <div id="submenu-1" class="collapse submenu">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="user_db.html">User</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            
+                  
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Notice Board</a>
-                                <div id="submenu-2" class="collapse submenu">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="user_nb.html">Published Notice <span class="badge badge-secondary">New</span></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="user_comp.html">My Schedule <span class="badge badge-secondary">New</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Formation</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Units</a>
                                 <div id="submenu-3" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="user_unit.html">Unit Formation</a>
+                                             <a class="nav-link" href="#">Registered Units</a> <!--add unit list  from database here -->
+                                             <a class="nav-link" href="add_unit.php">Add Unit</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -141,7 +90,7 @@
                                 <div id="submenu-4" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="user_reg.html">Result Register</a>
+                                            <a class="nav-link" href="admin_result_reg.php">Result Register</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="user_stat.html">Result Satictis</a>
@@ -155,7 +104,7 @@
                                 <div id="submenu-5" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="user_form.html">Form Details</a>
+                                            <a class="nav-link" href="admin_firer_reg.php">Register Firer</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -183,60 +132,62 @@
                     <!-- ============================================================== -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="page-header">
-                                <h2 class="pageheader-title">Virtual Kill House System</h2>
-                                
-                                <div class="page-breadcrumb">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
+                        
+                                <h2 class="pageheader-title">WELCOME TO ADMIN PANEL</h2>
+                                <?php                                    
+                                    $dbname = 'idp';
+                                    $dbuser = 'root';  
+                                    $dbpass = ''; 
+                                    $dbhost = 'localhost';
+
+                                    $mysqli = new mysqli($dbhost, $dbuser,
+                                    $dbpass, $dbname);
+
+                                    // Checking for connections
+                                    if ($mysqli->connect_error) {
+                                    die('Connect Error (' .
+                                    $mysqli->connect_errno . ') '.
+                                    $mysqli->connect_error);
+                                    }
+
+
+                                    $sql = "SELECT DISTINCT `Unit` FROM `hitcount`" ;
+                                    $result = $mysqli->query($sql);
+                                    $mysqli->close();
+
+                                    
+
+                                    
+                                ?> 
+                                <table class="responsive-table">
+                                    
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Unit</th>
+                                    </tr>
+                                    </thead>
+                                    <?php
+                                        // LOOP TILL END OF DATA
+                                        while($rows=$result->fetch_assoc())
+                                        {
+                                            ?>
+                                            <tr>
+                                                <!-- FETCHING DATA FROM EACH
+                                                    ROW OF EVERY COLUMN -->
+                                                <td><?php echo $rows['Unit'];?></td>
+
+                                            </tr>
+                                            <?php
+                                                }
+                                            ?>
+                                </table>
+                            
                         </div>
                     </div>
                     <!-- ============================================================== -->
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
-
-
-                    <!-- ============================================================== -->
-                    <!-- background  -->
-                    <!-- ============================================================== -->
-                    <div class="cantainer">
-                        <img src="images/f5.jpg" style="width:100%;">
-                        <div class="centered">WELLCOME TO USER PANEL</div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end background  -->
-                    <!-- ============================================================== -->
-                        
                 </div>
-            
-
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <div class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                            <div class="text-md-right footer-links d-none d-sm-block">
-                                <a href="javascript: void(0);">About</a>
-                                <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ============================================================== -->
-            <!-- end footer -->
-            <!-- ============================================================== -->
-
-
         </div>
         <!-- ============================================================== -->
         <!-- end wrapper  -->

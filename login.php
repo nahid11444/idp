@@ -64,10 +64,15 @@
               $row = mysqli_fetch_assoc($result);
               if($row["password"] == $psw) {
                 if($row["type"] == "admin") {
-                  header("Location: admin_firer_reg.php");
+                  
+                  header("Location: admin_unit.html");
+                }
+                else if($row["type"] == "14 EB"){
+                  header("Location: 14EB.php");
                 }
                 else {
-                  header("Location: user_view.php");
+                  header("Location: 49Fd.php");
+                  
                 }
               }
               else {
@@ -92,10 +97,12 @@
       <input type="password" placeholder="Enter Password" name="psw" required>
   
       <!-- <a href="admin_db.html"><button type="submit">Login</button></a> -->
-      <button type="submit">Login</button>
       <!-- <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label> -->
+    </div>
+    <div class="container">
+      <a href="admin_unit.html"> <button style="border: 2px solid red;" type="submit">Publish</button></a>
     </div>
   
     <!-- <div class="container">

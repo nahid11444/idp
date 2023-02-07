@@ -3,13 +3,13 @@
 <html  xml:lang="en" lang="en">
 
 <head>
-<title>Virtual Kill House</title>
+<title>CASEVAC</title>
 <meta http-equiv="content-language" content="en-us" />
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<meta name="author" content="Sabit Haque" />
+<meta name="author"/>
 <link rel="stylesheet" type="text/css" media="screen,projection" href="master.css" />
 <!--[if lt ie 7]><link rel="stylesheet" type="text/css" media="screen,projection" href="ie-win.css" /><![endif]-->
-<link rel="start" title="Virtual Kill House" href="#" />
+<link rel="start" title="CASEVAC" href="#" />
 <link rel="stylesheet" href="styles.css">
 <!-- Load an icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -34,7 +34,7 @@
       $servername = "localhost";
       $username = "root";
       $password = "";
-      $database = "idp";
+      $database = "thesis";
 
       // create a connection
       $conn = mysqli_connect($servername, $username, $password, $database);
@@ -58,11 +58,12 @@
           $uname = validate($uname);
           $psw = validate($psw);
           if($uname <> NULL && $psw <> NULL) {
-            $sql =  "SELECT * FROM `login` WHERE `username` = '$uname'";
+            $sql =  "SELECT * FROM `login` WHERE `uname` = '$uname'";
             $result = mysqli_query($conn, $sql);
-            if(mysqli_num_rows($result)) {
+          
+            if($execute_query = mysqli_num_rows($result)) {
               $row = mysqli_fetch_assoc($result);
-              if($row["password"] == $psw) {
+              if($row["psw"] == $psw) {
                 if($row["type"] == "admin") {
                   
                   header("Location: admin_unit.html");
@@ -102,7 +103,7 @@
       </label> -->
     </div>
     <div class="container">
-      <a href="admin_unit.html"> <button style="border: 2px solid red;" type="submit">Publish</button></a>
+      <a href="admin_unit.html"> <button style="border: 2px solid red;" type="submit">login</button></a>
     </div>
   
     <!-- <div class="container">

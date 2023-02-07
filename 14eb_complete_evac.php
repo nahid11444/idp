@@ -19,17 +19,9 @@
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <link rel="stylesheet" href="./css/firer.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/libs/css/style.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/chartist.css">
-    <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Adding user</title>
+    <link href="result.css" rel="stylesheet" media="all">
+
+    <title>14EB_Evac_Team</title>
 </head>
 
 <body>
@@ -43,7 +35,7 @@
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-light fixed-top">
                 <img style="height:60px ; width:60px;" src="./images/download.png">
-                <a class="navbar-brand">VIRTUAL KILL HOUSE SYSTEM</a>
+                <a class="navbar-brand">CAUALTY EVACUATION SYSTEM</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -81,46 +73,18 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav flex-column">
-                            <li class="nav-divider">
-                                <!-- Add Role of user here by php -->
-                                admin
-                            </li>
-                  
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Units</a>
-                                <div id="submenu-3" class="collapse submenu">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                             <a class="nav-link" href="user_unit.php">Registered Units</a> <!--add unit list  from database here -->
-                                             <a class="nav-link" href="#">Add Unit</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-
+                        <ul class="navbar-nav flex-column">         
+                        
                             <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Firing Result</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Evacuation Request</a>
                                 <div id="submenu-4" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="admin_result_reg.php">Result Register</a>
+                                            <a class="nav-link" href="#">Pending Evacuation</a>
+                                            <a class="nav-link" href="14eb_complete_evac.php">Completed Evacuation</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="user_stat.html">Result Satictis</a>
-                                        </li>
+                                
                                         </ul>
-                                </div>
-                            </li>
-
-                            <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Firing Form</a>
-                                <div id="submenu-5" class="collapse submenu">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="admin_firer_reg.php">Register Firer</a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </li>
                             
@@ -129,14 +93,6 @@
                 </nav>
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- end left sidebar -->
-        <!-- ============================================================== -->
-
-
-        <!-- ============================================================== -->
-        <!-- wrapper  -->
-        <!-- ============================================================== -->
         <div class="dashboard-wrapper">
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
@@ -144,56 +100,64 @@
                     <!-- ============================================================== -->
                     <!-- pageheader  -->
                     <!-- ============================================================== -->
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="container" >
-                                <div class="form_container">
-                                    <form action="add_unit_admin.php" method="POST">
-                                        <div class="heading">
-                                        <h2>Adding New Unit By Admin</h2>
-                                        </div>
-                                        <div class="form_wrap">
-                                            <div class="form_item">
-                                                <label>Unit</label>
-                                                <input type="text" name="Unit">
-                                            </div>
-                                            <div class="error" id="No"></div>  
-                                            <div class="form_item">
-                                                <label>Formation</label>
-                                                <input type="text" name="Formation">
-                                            </div>
-                                            <div class="error" id="Formation"></div>    
-                                        </div>
-                                        <div class="p-t-15">
-                                            <button class="btn btn-primary" type="submit" name="add">Add</button>
-                                        </div> 
-                                        <!-- <?php
-                                        if(isset($_POST['add'])){  
-                                        $_SESSION['Unit']=$_POST['Unit'];
-                                        $_SESSION['Formation']=$_POST['Formation'];
-                                        
-                                        }
-                                        else{
-                                            echo 'not set';
-                                        }
-                                        ?>    -->
-                                        </form>
-                                    </div>
-                                    
-                                </div>
-                            </div>
+                    <?php
+    
+                        $dbname = 'thesis';
+                        $dbuser = 'root';  
+                        $dbpass = ''; 
+                        $dbhost = 'localhost';
+
+                        $mysqli = new mysqli($dbhost, $dbuser,
+                        $dbpass, $dbname);
+
+                        // Checking for connections
+                        if ($mysqli->connect_error) {
+                        die('Connect Error (' .
+                        $mysqli->connect_errno . ') '.
+                        $mysqli->connect_error);
+                        }
+
+
+                        $sql = "SELECT * FROM `evac_req`" ;
+                        $result = $mysqli->query($sql);
+                        $mysqli->close();                     
+                    ?>
+<!-- partial -->
+
+                    <div col='8'>
+                    <center><u><h1>EVACUATION REQUEST BY SOLDIERS</h1></u></center>
+                    <table class="responsive-table">
+                        
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Longitude</th>
+                            <th scope="col">Latitude</th>
+                        </tr>
+                        </thead>
+                        <?php           
+                            // LOOP TILL END OF DATA
+                            while($rows=$result->fetch_assoc())
+                            {
+                                ?>
+                                <tr>
+                                    <!-- FETCHING DATA FROM EACH
+                                        ROW OF EVERY COLUMN -->
+                                    <td><?php echo $rows['ID'];?></td>
+                                    <td><?php echo $rows['Name'];?></td>
+                                    <td><?php echo $rows['Longitude'];?></td>
+                                    <td><?php echo $rows['Latitude'];?></td>
+                                </tr>
+                                <?php
+                                    }
+                                ?>
+                    </table>
                     </div>
-                    <!-- ============================================================== -->
-                    <!-- end pageheader  -->
-                    <!-- ============================================================== -->
                 </div>
+ </div>
+            </form>
         </div>
-        <!-- ============================================================== -->
-        <!-- end wrapper  -->
-        <!-- ============================================================== -->
-
-
-    </div>
     <!-- ============================================================== -->
     <!-- end main wrapper  -->
     <!-- ============================================================== -->
@@ -222,5 +186,4 @@
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
 </body>
- 
-</html>
+    </div>                   

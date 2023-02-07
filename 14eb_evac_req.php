@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
  
@@ -15,8 +18,10 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" href="./css/firer.css">
     <link href="result.css" rel="stylesheet" media="all">
-    <title>CASEVAC</title>
+
+    <title>14EB_Evac_Team</title>
 </head>
 
 <body>
@@ -30,7 +35,7 @@
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-light fixed-top">
                 <img style="height:60px ; width:60px;" src="./images/download.png">
-                <a class="navbar-brand">CASUALTY EVACUATION SYSTEM</a>
+                <a class="navbar-brand">CAUALTY EVACUATION SYSTEM</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -57,7 +62,6 @@
         <!-- ============================================================== -->
 
 
-      
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
@@ -69,37 +73,26 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav flex-column">
-                            <li class="nav-divider">
-                                <!-- Add Role of user here by php -->
-                                admin
-                            </li>
-                  
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>EVACUATION REQUEST</a>
-                                <div id="submenu-3" class="collapse submenu">
+                        <ul class="navbar-nav flex-column">         
+                        
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Evacuation Request</a>
+                                <div id="submenu-4" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                             <a class="nav-link" href="user_unit.php">Pending Evacuation</a> <!--add unit list  from database here -->
-                                             <a class="nav-link" href="add_unit.php">Evacuation Completion State</a>
+                                            <a class="nav-link" href="#">Pending Evacuation</a>
+                                            <a class="nav-link" href="14eb_complete_evac.php">Completed Evacuation</a>
                                         </li>
-                                    </ul>
+                                
+                                        </ul>
                                 </div>
-                            </li>                          
+                            </li>
+                            
                         </ul>
                     </div>
                 </nav>
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- end left sidebar -->
-        <!-- ============================================================== -->
-
-
-
-        <!-- ============================================================== -->
-        <!-- wrapper  -->
-        <!-- ============================================================== -->
         <div class="dashboard-wrapper">
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
@@ -193,5 +186,4 @@
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
 </body>
- 
-</html>
+    </div>                   
